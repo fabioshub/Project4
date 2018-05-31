@@ -10,9 +10,8 @@ using Android.Runtime;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using RecycleViewList;
 
-namespace RecycleViewList
+namespace po4
 {
     public class DemiProductAdapter : RecyclerView.Adapter
     {
@@ -20,7 +19,7 @@ namespace RecycleViewList
         public DemiProductList mProductList;
 
 
-        public DemiProductAdapter (DemiProductList productlist)
+        public DemiProductAdapter(DemiProductList productlist)
         {
             mProductList = productlist;
         }
@@ -45,7 +44,7 @@ namespace RecycleViewList
             get { return mProductList.NumProducts; }
         }
 
-        void OnClick (int position)
+        void OnClick(int position)
         {
             if (ItemClick != null) ItemClick(this, position);
         }

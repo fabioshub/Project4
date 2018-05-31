@@ -10,7 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace RecycleViewList
+namespace po4
 {
     public enum DemiProductCategory
     {

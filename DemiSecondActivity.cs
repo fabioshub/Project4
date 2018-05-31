@@ -10,16 +10,16 @@ using System.Collections.Generic;
 using Android.Support.V7.App;
 using System.Linq;
 
-namespace RecycleViewList
+namespace po4
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = false)]
     public class DemiSecondActivity : AppCompatActivity
     {
-        RecyclerView                mRecyclerView;
-        RecyclerView.LayoutManager  mLayoutManager;
-        DemiProductGroupListAdapter     mAdapter;
-        DemiProductList                 mProductList; // => List<Product>
-        DemiProductCategory             CategoryID;
+        RecyclerView mRecyclerView;
+        RecyclerView.LayoutManager mLayoutManager;
+        DemiProductGroupListAdapter mAdapter;
+        DemiProductList mProductList; // => List<Product>
+        DemiProductCategory CategoryID;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -27,11 +27,11 @@ namespace RecycleViewList
 
             SetContentView(Resource.Layout.Demiactivity_main);
 
-            mRecyclerView   = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
+            mRecyclerView = FindViewById<RecyclerView>(Resource.Id.recyclerView1);
 
             if (this.Intent.Extras != null)
             {
-                var category = (DemiProductCategory) Intent.Extras.GetInt("CategoryID");
+                var category = (DemiProductCategory)Intent.Extras.GetInt("CategoryID");
                 CategoryID = category;
             }
 
@@ -43,7 +43,7 @@ namespace RecycleViewList
             //----------------------------------------------------------------------------------------
             // Layout Managing Set-up
 
-            mLayoutManager  = new GridLayoutManager(this, 2, GridLayoutManager.Vertical, false);
+            mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Vertical, false);
             mRecyclerView.SetLayoutManager(mLayoutManager);
 
             //----------------------------------------------------------------------------------------
@@ -69,4 +69,5 @@ namespace RecycleViewList
         }
     }
 }
+
 

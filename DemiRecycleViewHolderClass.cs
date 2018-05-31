@@ -11,19 +11,19 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 
-namespace RecycleViewList
+namespace po4
 {
     public class DemiRecycleViewHolderClass : RecyclerView.ViewHolder
     {
-        public TextView Category    { get; private set; }
-        public TextView Group       { get; private set; }
-        public TextView Name        { get; private set; }
+        public TextView Category { get; private set; }
+        public TextView Group { get; private set; }
+        public TextView Name { get; private set; }
 
-        public DemiRecycleViewHolderClass (View itemView, Action<int> listener) : base(itemView)
+        public DemiRecycleViewHolderClass(View itemView, Action<int> listener) : base(itemView)
         {
-            Category    = itemView.FindViewById<TextView>(Resource.Id.categoryView);
-            Group       = itemView.FindViewById<TextView>(Resource.Id.groupView);
-            Name        = itemView.FindViewById<TextView>(Resource.Id.productView);
+            Category = itemView.FindViewById<TextView>(Resource.Id.categoryView);
+            Group = itemView.FindViewById<TextView>(Resource.Id.groupView);
+            Name = itemView.FindViewById<TextView>(Resource.Id.productView);
 
             itemView.Click += (sender, e) => listener(base.LayoutPosition);
         }

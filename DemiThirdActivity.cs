@@ -9,11 +9,10 @@ using Android.Support.V7.Widget;
 using System.Collections.Generic;
 using Android.Support.V7.App;
 using System.Linq;
-using RecycleViewList;
 
-namespace RecycleViewList
+namespace po4
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = false)]
+    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light.NoActionBar", MainLauncher = false)]
     public class DemiThirdActivity : AppCompatActivity
     {
         RecyclerView                mRecyclerView;

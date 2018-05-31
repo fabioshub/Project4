@@ -11,7 +11,7 @@ using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 
-namespace RecycleViewList
+namespace po4
 {
     public class DemiProductGroupListAdapter : RecyclerView.Adapter
     {
@@ -19,7 +19,7 @@ namespace RecycleViewList
         public DemiProductList mGroupList;
 
 
-        public DemiProductGroupListAdapter (DemiProductList grouplist)
+        public DemiProductGroupListAdapter(DemiProductList grouplist)
         {
             mGroupList = grouplist;
         }
@@ -43,7 +43,7 @@ namespace RecycleViewList
             get { return mGroupList.NumProducts; }
         }
 
-        void OnClick (int position)
+        void OnClick(int position)
         {
             if (ItemClick != null) ItemClick(this, position);
         }
